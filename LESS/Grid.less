@@ -1,0 +1,356 @@
+@import 'Variables';
+/*# URMC Grid #*/
+
+/*# URMC Grid/Adjustable Variables #*/
+@grid-columns: 12;
+@row-padding: 20px;
+@col-margin: 1%;
+@col-padding: 2%;
+
+/* DO NOT CHANGE */
+@col-width: 100% / @grid-columns;
+@gutter: ( (@col-margin + @col-padding) * 2);
+
+main
+{
+	section.row, div.row
+	{
+		padding: 0 @row-padding;
+		margin: 20px auto;
+		max-width: 1024px;
+		overflow: auto;
+		/*# URMC Grid/Row Options #*/
+		&.plain
+		{
+			&.no-pad
+			{
+				padding: 0;
+                &:first-child
+                {
+                    padding-bottom: @row-padding;
+                }
+			}
+			article.col
+			{
+				.no-shadow;
+			}
+		}
+		&.fluid
+		{
+			margin: 0;
+			max-width: none;
+		}
+		&.no-pad
+		{
+			padding: 0px;
+		}
+		&.no-mar
+		{
+			max-width: 1014px;
+            margin: 0 auto;
+		}
+        article.col, div.col, aside.col, nav.col
+        {
+            float: left;
+			margin: 1.8px @col-margin;
+            overflow: hidden;
+        }
+		article.col, div.col, aside.col
+		{
+			padding: @col-padding;
+			.box-shadow;
+			/*# URMC Grid/Column Options #*/
+			&.plain
+			{
+				.no-shadow;
+                padding: 0 @col-padding;
+			}
+			&.no-gut
+			{
+				margin: 0;
+				padding: 0;
+			}
+			&.no-mar
+			{
+				margin: 0;
+			}
+			&.no-pad
+			{
+				padding: 0;
+			}
+            &.plain-chil p
+            {
+                line-height: 0;
+                margin: 0;
+                padding: 0;
+            }
+			/*# URMC Grid/Columns #*/
+			&.col-1
+			{
+				width: @col-width - @gutter;
+				&.no-gut
+				{
+					 width: @col-width;
+				}
+				&.no-mar
+				{
+					 width: (@col-width - (@col-padding * 2));
+				}
+				&.no-pad
+				{
+					 width: (@col-width - (@col-margin * 2));
+				}
+			}
+			&.col-2
+			{
+				width: ((@col-width * 2) - @gutter);
+				&.no-gut
+				{
+					 width: (@col-width * 2);
+				}
+				&.no-mar
+				{
+					 width: ((@col-width * 2) - (@col-padding * 2));
+				}
+				&.no-pad
+				{
+					 width: ((@col-width * 2) - (@col-margin * 2));
+				}
+			}
+			&.col-3
+			{
+				width: ((@col-width * 3) - @gutter);
+				&.no-gut
+				{
+					 width: (@col-width * 3);
+				}
+				 &.no-mar
+				{
+					 width: ((@col-width * 3) - (@col-padding * 2));
+				}
+				&.no-pad
+				{
+					 width: ((@col-width * 3) - (@col-margin * 2));
+				}
+			}
+			&.col-4
+			{
+				width: ((@col-width * 4) - @gutter);
+				&.no-gut
+				{
+					 width: (@col-width * 4);
+				}
+				&.no-mar
+				{
+					 width: ((@col-width * 4) - (@col-padding * 2));
+				}
+				&.no-pad
+				{
+					 width: ((@col-width * 4) - (@col-margin *2));
+				}
+			}
+			&.col-5
+			{
+				width: ((@col-width * 5) - @gutter);
+				&.no-gut
+				{
+					 width: (@col-width * 5);
+				}
+				&.no-mar
+				{
+					 width: ((@col-width * 5) - (@col-padding * 2));
+				}
+				&.no-pad
+				{
+					 width: ((@col-width * 5) - (@col-margin * 2));
+				}
+			}
+			&.col-6
+			{
+				width: ((@col-width * 6) - @gutter);
+				&.no-gut
+				{
+					 width: (@col-width * 6);
+				}
+				&.no-mar
+				{
+					 width: ((@col-width * 6) - (@col-padding * 2));
+				}
+				&.no-pad
+				{
+					 width: ((@col-width * 6) - (@col-margin * 2));
+				}
+			}
+			&.col-7
+			{
+				width: ((@col-width * 7) - @gutter);
+				&.no-gut
+				{
+					 width: (@col-width * 7);
+				}
+				&.no-mar
+				{
+					 width: ((@col-width * 7) - (@col-padding * 2));
+				}
+				&.no-pad
+				{
+					 width: ((@col-width * 7) - (@col-margin * 2));
+				}
+			}
+			&.col-8
+			{
+				width: ((@col-width * 8) - @gutter);
+				&.no-gut
+				{
+					 width: (@col-width * 8);
+				}
+				&.no-mar
+				{
+					 width: ((@col-width * 8) - (@col-padding * 2));
+				}
+				&.no-pad
+				{
+					 width: ((@col-width * 8) - (@col-margin * 2));
+				}
+			}
+			&.col-9
+			{
+				width: ((@col-width * 9) - @gutter);
+				&.no-gut
+				{
+					 width: (@col-width * 9);
+				}
+				&.no-mar
+				{
+					 width: ((@col-width * 9) - (@col-padding * 2));
+				}
+				&.no-pad
+				{
+					 width: ((@col-width * 9) - (@col-margin * 2));
+				}
+			}
+			&.col-10
+			{
+				width: ((@col-width * 10) - @gutter);
+				&.no-gut
+				{
+					 width: (@col-width * 10);
+				}
+				&.no-mar
+				{
+					 width: ((@col-width * 10) - (@col-padding * 2));
+				}
+				&.no-pad
+				{
+					 width: ((@col-width * 10) - (@col-margin * 2));
+				}
+			}
+			&.col-11
+			{
+				width: ((@col-width * 11) - @gutter);
+				&.no-gut
+				{
+					 width: (@col-width * 11);
+				}
+				&.no-mar
+				{
+					 width: ((@col-width * 11) - (@col-padding * 2));
+				}
+				&.no-pad
+				{
+					 width: ((@col-width * 11) - (@col-margin * 2));
+				}
+			}
+			&.col-12
+			{
+				width: ((@col-width * 12) - (@col-margin * 2));
+                padding: 0;
+				&.no-mar, &.no-gut
+				{
+					 width: 100%;
+				}
+			}
+		}
+		aside.col, nav.col
+		{
+			width: ((@col-width * 3) - @gutter);
+            background: @sidebar-background;
+			&.no-mar
+			{
+				 width: (@col-width * 3);
+			}
+		}
+	}
+}
+/*# URMC Grid/Responsive #*/
+@media @tablet-width
+{	
+    body:not(.EditMode):not(#m_bodyElem):not(.PreviewMode) main
+    {
+        section.row, div.row
+        {
+            margin-bottom: 10px 0;
+            padding: @row-padding 10px;
+            &.no-mar
+            {
+                margin: 0;
+            }
+            &.no-pad
+            {
+                padding: 0;
+            }
+            article.col, div.col, nav.col, aside.col
+            {
+                float: none;
+                &.col-1, &.col-2, &.col-3, &.col-4, &.col-5, &.col-6, &.col-7, &.col-8, &.col-9, &.col-10, &.col-11
+                {
+                    width: (100% - (@col-padding * 2));
+                    margin: 0;
+                }
+            }
+        }
+        .no-tab
+        {
+            display: none;
+        }
+    }
+}
+
+
+@media @mobile-width
+{	
+    body:not(.EditMode):not(#m_bodyElem):not(.PreviewMode) main
+    {
+        section.row, div.row
+        {
+            margin-bottom: 10px 0;
+            padding: @row-padding 10px;
+            &.no-mar
+            {
+                margin: 0;
+            }
+            &.no-pad
+            {
+                padding: 0;
+            }
+            article.col, div.col, nav.col, aside.col
+            {
+                float: none;
+                &.no-mob
+                {
+                    display: none;
+                }
+                &.col-1, &.col-2, &.col-3, &.col-4, &.col-5, &.col-6, &.col-7, &.col-8, &.col-9, &.col-10, &.col-11
+                {
+                    width: (100% - (@col-padding * 4));
+                    margin: 0;
+                    padding: (@col-padding * 2);
+                }
+            }
+        }
+        .no-mob
+        {
+            display: none;
+        }
+    }
+}
